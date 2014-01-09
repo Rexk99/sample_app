@@ -1,14 +1,14 @@
 source 'https://rubygems.org'
 
 gem 'rails', '3.2.3'
-
+gem 'pg', '~> 0.12.2'
 
 # Bundle edge Rails instead:
-# gem 'rails', :git => 'git://github.com/rails/rails.git'
+# gem 'rails', :git => 'git:/subl/github.com/rails/rails.git'
 
-group :development, :test, :production do 
+group :development do 
 	gem 'rspec-rails', '2.9.0'
-	gem 'pg'
+	gem 'guard-rspec', '0.5.5'
 end
 
 
@@ -23,7 +23,13 @@ end
 gem 'jquery-rails', '~> 2.0.0'
 
 group :test do
+	gem 'rspec-rails', '2.9.0'
 	gem 'capybara', '1.1.2'
+	gem 'rb-fsevent', :require => false
+	gem 'growl', '1.0.3'
+	gem 'guard-spork', '0.3.2'
+	gem 'spork', '0.9.0'
+
 end
 
 
